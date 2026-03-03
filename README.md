@@ -19,4 +19,3 @@
 ## 🧠 Architecture
 User → Gradio UI → Persona Selector → Gemini Model → Response
 
-## 📸 Demo Screenshots
