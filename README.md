@@ -1,8 +1,5 @@
 # 🎓 AI Study Assistant (Powered by Gemini)
 
-## 🚀 Live Demo
-[Click here to try it]
-
 ## 📌 Features
 - Dual personality modes (Friendly / Academic)
 - System-instruction based tone control
@@ -18,4 +15,5 @@
 
 ## 🧠 Architecture
 User → Gradio UI → Persona Selector → Gemini Model → Response
+
 
