@@ -10,8 +10,8 @@ import gradio as gr
 
 #uses client class to create an instance (for interacting with gemini api)
 load_dotenv()
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-client = genai.Client(api_key = GEMINI_API_KEY)
+# GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key = os.getenv("GEMINI_API_KEY"))
 
 
 # system prompt personalities to send instructions to LLM to behave like
@@ -43,9 +43,9 @@ def study_assistant(question, persona):
 
 demo = gr.Interface(
     fn = study_assistant,
-    inputs = [gr.Textbox(lines = 4, placeholder = "Ask a Question", label="Question"),
+    inputs = [gr.Textbox(lines = 3, placeholder = "Ask a Question", label="Question"),
               gr.Radio(choices = list(personalities.keys()), value = "Friendly", label = "personalities")],
-    outputs = gr.Textbox(lines = 8, label = "Response"),
+    outputs = gr.Textbox(lines = 7, label = "Response"),
     title = "Study Assistant",
     description = "Ask a question and get an ans from your AI study assistant with a choosen personality"
 )
